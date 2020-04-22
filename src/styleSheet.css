@@ -1,0 +1,57 @@
+.main_salary_componentDiv {
+  width: 800px;
+  margin-top: 2%;
+}
+
+table {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 7px;
+  min-width: 150px;
+}
+
+tr:nth-child(even) {
+  background: lightsteelblue;
+}
+
+button {
+  margin-top: 1.6%;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: lightsteelblue;
+  width: 20%;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  flex: 1;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.monthly_salary {
+  display: flex;
+}
+.monthly_salary2 {
+  display: flex;
+  margin-top: -800px;
+  margin-left: 850px;
+  width: auto;
+}
