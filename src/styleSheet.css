@@ -1,7 +1,13 @@
 .mainsalary_componentDiv {
+  display: flex;
   width: 100%;
   margin-top: 2%;
   margin-left: 1%;
+}
+@media only screen and( max-width :758px) {
+  .mainsalary_componentDiv {
+    display: block;
+  }
 }
 
 table {
@@ -65,8 +71,8 @@ input::-webkit-inner-spin-button {
 
 .monthly_salary2 {
   /* display: flex; */
-  margin-top: -800px;
-  margin-left: 900px;
+  /* margin-top: -800px;
+  margin-left: 900px; */
   /* width: 100%; */
   padding: 10px;
   flex-direction: column;
@@ -109,7 +115,4 @@ input::-webkit-inner-spin-button {
   padding: 1px 0;
   color: #0f0a5f;
   border: 1px dashed #b3b8bf;
-}
-
-.old_new {
 }
