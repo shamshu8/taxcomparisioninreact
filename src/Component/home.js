@@ -48,7 +48,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        1750000
         <div className="input_div">
           <InputsValue onSubmit={this.handleSubmit} />
         </div>
@@ -57,8 +56,9 @@ class Home extends React.Component {
           <div>Tax payable as per Old Tax :{this.state.oldTax}</div>
         </div>
         <div className="mainsalary_componentDiv">
-          <OldTax oldTaxDone={this.showOldTaxValue} data={this.state} />
           <NewTax onCalculationDone={this.showNewTaxValue} data={this.state} />
+          <OldTax oldTaxDone={this.showOldTaxValue} data={this.state} />
+
           <SalaryHead onTDSChange={this.handleTax} data={this.state} />
         </div>
       </div>

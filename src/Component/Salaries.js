@@ -40,14 +40,14 @@ const SalaryComponent = (data) => {
     totalDeduction: Math.round(totalDeductionValue),
     grossSalary: Math.round(totalSalaryValue),
     netSalary: Math.round(netSalaryValue),
-    tds: monthlyTDS,
+    tds,
   };
 };
 
 const SalaryHead = ({ data, onTDSChange }) => {
-  if (!data.ctcValue) {
-    return <div></div>;
-  }
+  // if (!data.ctcValue) {
+  //   return <div></div>;
+  // }
   const salaires = SalaryComponent(data);
 
   return (
@@ -88,18 +88,18 @@ const SalaryHead = ({ data, onTDSChange }) => {
               <th>Amount</th>
             </tr>
             <tr>
-              <td>PT </td>
-              <td></td>
-            </tr>
-            <tr>
               <td>
-                TDS
-                <input type="checkbox" onChange={onTDSChange} />
+                This year TDS
+                <input
+                  className="old_new"
+                  type="checkbox"
+                  onChange={onTDSChange}
+                />
               </td>
               <td>{salaires.tds}</td>
             </tr>
             <tr>
-              <td>Total Deductions </td>
+              <td> Monthly TDS </td>
               <td>{salaires.totalDeduction}</td>
             </tr>
             <tr>

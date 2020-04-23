@@ -40,36 +40,42 @@ class InputsValue extends Component {
       <div>
         <div>
           <input
+            className="input"
             type="number"
             placeholder="Enter CTC"
             name="ctcValue"
             onChange={this.getInputs}
           />
           <input
+            className="input"
             type="number"
             placeholder="Enter Annual Rent"
             name="rentValue"
             onChange={this.getInputs}
           />
           <input
+            className="input"
             type="number"
             placeholder="Enter 80C value"
             name="deduction80C"
             onChange={this.getInputs}
           />
           <input
+            className="input"
             type="number"
             placeholder="Enter 80D value"
             name="deduction80D"
             onChange={this.getInputs}
           />
           <input
+            className="input"
             type="number"
             placeholder="Enter Stand. deduction"
             name="stanDard"
             onChange={this.getInputs}
           />
           <input
+            className="input"
             type="text"
             name="metroorNot"
             list="chose"

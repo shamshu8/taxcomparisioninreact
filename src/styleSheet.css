@@ -40,7 +40,7 @@ button {
   margin-left: 10%;
 }
 
-input {
+.input {
   padding: 5px;
   border-radius: 5px;
   border: none;
@@ -109,4 +109,7 @@ input::-webkit-inner-spin-button {
   padding: 1px 0;
   color: #0f0a5f;
   border: 1px dashed #b3b8bf;
+}
+
+.old_new {
 }
