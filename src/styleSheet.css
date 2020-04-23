@@ -31,14 +31,14 @@ button {
   border: none;
   outline: none;
   background: purple;
-  width: 20%;
+  /* width: 10%; */
   font-weight: bolder;
   color: white;
   box-shadow: 3px 5px grey;
 }
-.input_div {
+/* .input_div {
   margin-left: 10%;
-}
+} */
 
 .input {
   padding: 5px;
@@ -67,9 +67,9 @@ input::-webkit-inner-spin-button {
   /* display: flex; */
   margin-top: -800px;
   margin-left: 900px;
-  width: 25%;
-  border: 1px dashed lightcoral;
+  /* width: 100%; */
   padding: 10px;
+  flex-direction: column;
 }
 .suggestion {
   font-weight: bold;
