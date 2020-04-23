@@ -1,11 +1,12 @@
-.main_salary_componentDiv {
-  width: 800px;
+.mainsalary_componentDiv {
+  width: 100%;
   margin-top: 2%;
+  margin-left: 1%;
 }
 
 table {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 1px;
   border-radius: 10px;
   border-collapse: collapse;
   width: 50%;
@@ -19,17 +20,24 @@ td {
 }
 
 tr:nth-child(even) {
-  background: lightsteelblue;
+  background: lightblue;
 }
 
 button {
   margin-top: 1.6%;
+  margin-left: 30%;
   padding: 8px 15px;
   border-radius: 5px;
   border: none;
   outline: none;
-  background: lightsteelblue;
+  background: purple;
   width: 20%;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 3px 5px grey;
+}
+.input_div {
+  margin-left: 10%;
 }
 
 input {
@@ -40,18 +48,52 @@ input {
   border-bottom: 1px solid black;
   box-sizing: border-box;
   flex: 1;
+  box-shadow: 10px 10px grey;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.monthly_salary {
-  display: flex;
-}
-.monthly_salary2 {
-  display: flex;
-  margin-top: -800px;
-  margin-left: 850px;
+.monthlySalaryH3tag {
   width: auto;
+  margin-left: 20%;
+  animation: blink 1s linear infinite;
+  color: blueviolet;
+  font-weight: bolder;
+}
+
+.monthly_salary2 {
+  /* display: flex; */
+  margin-top: -800px;
+  margin-left: 900px;
+  width: 25%;
+  border: 1px dashed lightcoral;
+  padding: 10px;
+}
+.suggestion {
+  font-weight: bold;
+  color: green;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.table3 {
+  background-color: lemonchiffon;
+  border: 1px solid #ddd;
+  padding: 1px;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 50%;
 }

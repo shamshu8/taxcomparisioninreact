@@ -85,16 +85,6 @@ const newTaxCalculation = (data) => {
     Appl_amnt5_value +
     Appl_amnt6_value +
     Appl_amnt7_value;
-  console.log({
-    sub_Total_App_value,
-    Appl_amnt1_value,
-    Appl_amnt2_value,
-    Appl_amnt3_value,
-    Appl_amnt4_value,
-    Appl_amnt5_value,
-    Appl_amnt6_value,
-    Appl_amnt7_value,
-  });
 
   let FirstTax_value;
   FirstTax_value = (Appl_amnt2_value * 5) / 100;
@@ -173,9 +163,12 @@ const newTaxCalculation = (data) => {
 };
 
 const NewTax = ({ data }) => {
+  if (!data.ctcValue) {
+    return <div></div>;
+  }
   const calculation = newTaxCalculation(data);
   return (
-    <div className="main_salary_componentDiv">
+    <div>
       <h3>Tax payable as per new slab </h3>
       <table>
         <tr>

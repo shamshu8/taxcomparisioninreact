@@ -15,9 +15,9 @@ const oldTaxCalcuation = (data) => {
   let basicSalaryValue = (ctcValue * 50) / 100;
 
   let hraValue;
-  if (metroorNot === "YES") {
+  if (metroorNot === "Yes") {
     hraValue = (basicSalaryValue * 50) / 100;
-  } else if (metroorNot === "NO") {
+  } else if (metroorNot === "No") {
     hraValue = (basicSalaryValue * 40) / 100;
   } else {
     hraValue = (basicSalaryValue * 40) / 100;
@@ -142,13 +142,13 @@ const oldTaxCalcuation = (data) => {
 };
 
 const OldTax = ({ data }) => {
-  //   if (!data.ctcValue) {
-  //     return <p>Put your ctc and check the tax payable</p>;
-  //   }
+  if (!data.ctcValue) {
+    return <div></div>;
+  }
   const calculation = oldTaxCalcuation(data);
 
   return (
-    <div className="main_salary_componentDiv">
+    <div>
       <div>
         <h3>Tax payable as per Old slab</h3>
         <table>

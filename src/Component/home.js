@@ -4,6 +4,7 @@ import InputsValue from "./InputValue";
 import OldTax from "./oldTax";
 import NewTax from "./newTax";
 import SalaryHead from "./Salaries";
+import Compare from "./comparision";
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,14 +14,19 @@ class Home extends React.Component {
   handleSubmit = (data) => {
     this.setState(data);
   };
+
   render() {
     return (
       <div>
-        <InputsValue onSubmit={this.handleSubmit} />
-
-        <OldTax data={this.state} />
-        <NewTax data={this.state} />
-        <SalaryHead data={this.state} />
+        <div className="input_div">
+          <InputsValue onSubmit={this.handleSubmit} />
+        </div>
+        <div className="mainsalary_componentDiv">
+          {/* <Compare data={this.state} /> */}
+          <OldTax data={this.state} />
+          <NewTax data={this.state} />
+          <SalaryHead data={this.state} />
+        </div>
       </div>
     );
   }

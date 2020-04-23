@@ -11,8 +11,6 @@ class InputsValue extends Component {
       deduction80D: 0,
       stanDard: 0,
       metroorNot: "",
-      PF: "",
-      ESI: "",
     };
   }
   getInputs = (e) => {
@@ -49,46 +47,68 @@ class InputsValue extends Component {
           />
           <input
             type="number"
-            placeholder="enter Annual Rent"
+            placeholder="Enter Annual Rent"
             name="rentValue"
             onChange={this.getInputs}
           />
           <input
             type="number"
-            placeholder="enter 80C value"
+            placeholder="Enter 80C value"
             name="deduction80C"
             onChange={this.getInputs}
           />
           <input
             type="number"
-            placeholder="enter 80D value"
+            placeholder="Enter 80D value"
             name="deduction80D"
             onChange={this.getInputs}
           />
           <input
             type="number"
-            placeholder="enter Stand. deduction"
+            placeholder="Enter Stand. deduction"
             name="stanDard"
             onChange={this.getInputs}
           />
-          <input
+          {/* <input
             type="text"
             placeholder="Metro City? YES/NO"
             name="metroorNot"
             onChange={this.getInputs}
-          />
+          /> */}
           <input
             type="text"
-            placeholder="Have PF? YES/NO"
+            name="metroorNot"
+            list="chose"
+            placeholder="Metro City?"
+            onChange={this.getInputs}
+          />
+          <datalist id="chose">
+            <option value="Yes"></option>
+            <option value="No"></option>
+          </datalist>
+          {/* <input
+            type="text"
             name="PF"
+            list="chose"
+            placeholder="Have PF?"
             onChange={this.getInputs}
           />
+          <datalist id="chose">
+            <option value="Yes"></option>
+            <option value="No"></option>
+          </datalist>
+    
           <input
             type="text"
-            placeholder="Have ESI? YES/NO"
             name="ESI"
+            list="chose"
+            placeholder="Have ESI?"
             onChange={this.getInputs}
           />
+          <datalist id="chose">
+            <option value="Yes"></option>
+            <option value="No"></option>
+          </datalist> */}
         </div>
         <div>
           <button onClick={this.taxCalculations}>Calculate Tax</button>
