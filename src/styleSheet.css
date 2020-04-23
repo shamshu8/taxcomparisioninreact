@@ -43,9 +43,12 @@ button {
   color: white;
   box-shadow: 3px 5px grey;
 }
-/* .input_div {
-  margin-left: 10%;
-} */
+@media only screen and (max-width: 768px) {
+  button {
+    margin-left: 30%;
+    /* width: 40%; */
+  }
+}
 
 .input {
   padding: 5px;
@@ -57,6 +60,12 @@ button {
   flex: 1;
   box-shadow: 10px 10px grey;
 }
+@media only screen and (max-width: 768px) {
+  .input {
+    width: 100px;
+  }
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -116,4 +125,9 @@ input::-webkit-inner-spin-button {
   padding: 1px 0;
   color: #0f0a5f;
   border: 1px dashed #b3b8bf;
+}
+@media only screen and (max-width: 768px) {
+  .tax_message {
+    width: 100%;
+  }
 }
