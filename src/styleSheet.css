@@ -2,9 +2,10 @@
   display: flex;
   width: 100%;
   margin-top: 2%;
+
   margin-left: 1%;
 }
-@media only screen and( max-width :758px) {
+@media only screen and (max-width: 768px) {
   .mainsalary_componentDiv {
     display: block;
   }
