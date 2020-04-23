@@ -45,9 +45,9 @@ const SalaryComponent = (data) => {
 };
 
 const SalaryHead = ({ data, onTDSChange }) => {
-  // if (!data.ctcValue) {
-  //   return <div></div>;
-  // }
+  if (!data.ctcValue) {
+    return <div></div>;
+  }
   const salaires = SalaryComponent(data);
 
   return (
