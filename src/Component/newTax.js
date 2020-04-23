@@ -162,11 +162,15 @@ const newTaxCalculation = (data) => {
   };
 };
 
-const NewTax = ({ data }) => {
-  if (!data.ctcValue) {
-    return <div></div>;
-  }
+const NewTax = ({ data, onCalculationDone }) => {
+  // if (!data.ctcValue) {
+  //   return <div></div>;
+  // }
+
   const calculation = newTaxCalculation(data);
+  if (calculation.total_tax >= 0) {
+    onCalculationDone(calculation.total_tax);
+  }
   return (
     <div>
       <h3>Tax payable as per new slab </h3>
@@ -183,7 +187,7 @@ const NewTax = ({ data }) => {
           <td>0%</td>
           <td>{calculation.Appl_amnt1}</td>
           <td>{calculation.bal_amnt1}</td>
-          <td></td>
+          <td>0</td>
         </tr>
         <tr>
           <td>2,50,001-5,00,000</td>

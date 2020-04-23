@@ -69,12 +69,6 @@ class InputsValue extends Component {
             name="stanDard"
             onChange={this.getInputs}
           />
-          {/* <input
-            type="text"
-            placeholder="Metro City? YES/NO"
-            name="metroorNot"
-            onChange={this.getInputs}
-          /> */}
           <input
             type="text"
             name="metroorNot"

@@ -1,9 +1,8 @@
 import React from "react";
 import "../styleSheet.css";
+import NewTax from "./newTax";
 
 const SalaryComponent = (data) => {
-  let esiSalary = 21000;
-  let PFsalary = 15000;
   let ctcValue = data.ctcValue || 0;
   let metroorNot = data.metroorNot;
   let ctcToSpecial = ctcValue / 12;
@@ -24,8 +23,10 @@ const SalaryComponent = (data) => {
   let totalSalaryValue =
     BasicSalary_value + hraValue + da_value + special_value;
 
-  let totalDeductionValue;
-  totalDeductionValue = 0;
+  const showOldTDS = data.showTDS;
+  const tds = showOldTDS ? data.oldTax : data.newTax;
+  const totalDeductionValue = tds / 12;
+  const monthlyTDS = tds / 12;
 
   let netSalaryValue;
   netSalaryValue = totalSalaryValue - totalDeductionValue;
@@ -39,14 +40,16 @@ const SalaryComponent = (data) => {
     totalDeduction: Math.round(totalDeductionValue),
     grossSalary: Math.round(totalSalaryValue),
     netSalary: Math.round(netSalaryValue),
+    tds: monthlyTDS,
   };
 };
 
-const SalaryHead = ({ data }) => {
+const SalaryHead = ({ data, onTDSChange }) => {
   if (!data.ctcValue) {
     return <div></div>;
   }
   const salaires = SalaryComponent(data);
+
   return (
     <div>
       <div className="monthly_salary2">
@@ -89,8 +92,11 @@ const SalaryHead = ({ data }) => {
               <td></td>
             </tr>
             <tr>
-              <td>TDS </td>
-              <td>{salaires.tdsTax}</td>
+              <td>
+                TDS
+                <input type="checkbox" onChange={onTDSChange} />
+              </td>
+              <td>{salaires.tds}</td>
             </tr>
             <tr>
               <td>Total Deductions </td>

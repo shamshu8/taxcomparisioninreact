@@ -141,11 +141,14 @@ const oldTaxCalcuation = (data) => {
   };
 };
 
-const OldTax = ({ data }) => {
-  if (!data.ctcValue) {
-    return <div></div>;
-  }
+const OldTax = ({ data, oldTaxDone }) => {
+  // if (!data.ctcValue) {
+  //   return <div></div>;
+  // }
   const calculation = oldTaxCalcuation(data);
+  if (calculation.totalTax >= 0) {
+    oldTaxDone(calculation.totalTax);
+  }
 
   return (
     <div>

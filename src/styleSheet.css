@@ -19,7 +19,7 @@ td {
   min-width: 150px;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background: lightblue;
 }
 
@@ -96,4 +96,17 @@ input::-webkit-inner-spin-button {
   border-radius: 10px;
   border-collapse: collapse;
   width: 50%;
+}
+
+.tax_message {
+  width: 60%;
+  margin-left: 1%;
+  margin-top: 3%;
+  display: flex;
+  line-height: 1.7;
+  align-items: center;
+  flex-direction: column;
+  padding: 1px 0;
+  color: #0f0a5f;
+  border: 1px dashed #b3b8bf;
 }
