@@ -26,7 +26,7 @@ const SalaryComponent = (data) => {
   const showOldTDS = data.showTDS;
   const tds = showOldTDS ? data.oldTax : data.newTax;
   const totalDeductionValue = tds / 12;
-  const monthlyTDS = tds / 12;
+  // const monthlyTDS = tds / 12;
 
   let netSalaryValue;
   netSalaryValue = totalSalaryValue - totalDeductionValue;
@@ -48,7 +48,7 @@ const SalaryHead = ({ data, onTDSChange }) => {
   if (!data.ctcValue) {
     return <div></div>;
   }
-  const salaires = SalaryComponent(data);
+  const salaries = SalaryComponent(data);
 
   return (
     <div>
@@ -61,23 +61,23 @@ const SalaryHead = ({ data, onTDSChange }) => {
           </tr>
           <tr>
             <td>Basic Salary</td>
-            <td>{salaires.BasicSalary}</td>
+            <td>{salaries.BasicSalary}</td>
           </tr>
           <tr>
             <td>D . A </td>
-            <td>{salaires.da}</td>
+            <td>{salaries.da}</td>
           </tr>
           <tr>
             <td>HRA </td>
-            <td>{salaires.Hra}</td>
+            <td>{salaries.Hra}</td>
           </tr>
           <tr>
             <td>Special Allowance </td>
-            <td>{salaires.Special}</td>
+            <td>{salaries.Special}</td>
           </tr>
           <tr>
             <td>Total Earned </td>
-            <td>{salaires.totalSalary}</td>
+            <td>{salaries.totalSalary}</td>
           </tr>
         </table>
 
@@ -96,15 +96,15 @@ const SalaryHead = ({ data, onTDSChange }) => {
                   onChange={onTDSChange}
                 />
               </td>
-              <td>{salaires.tds}</td>
+              <td>{salaries.tds}</td>
             </tr>
             <tr>
               <td> Monthly TDS </td>
-              <td>{salaires.totalDeduction}</td>
+              <td>{salaries.totalDeduction}</td>
             </tr>
             <tr>
               <td className="suggestion">Take Home salary </td>
-              <td className="suggestion">{salaires.netSalary}</td>
+              <td className="suggestion">{salaries.netSalary}</td>
             </tr>
           </table>
         </div>
