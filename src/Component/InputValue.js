@@ -56,7 +56,7 @@ class InputsValue extends Component {
           <input
             className="input"
             type="number"
-            placeholder="Enter 80C value"
+            placeholder="Enter Invest/Insu. max 1.5L"
             name="deduction80C"
             onChange={this.getInputs}
           />
@@ -70,7 +70,7 @@ class InputsValue extends Component {
           <input
             className="input"
             type="number"
-            placeholder="Enter Stand. deduction"
+            placeholder="Enter Std.dedu. Max 50K"
             name="stanDard"
             onChange={this.getInputs}
           />
