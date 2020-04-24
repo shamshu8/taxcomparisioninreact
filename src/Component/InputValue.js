@@ -49,28 +49,28 @@ class InputsValue extends Component {
           <input
             className="input"
             type="number"
-            placeholder="Enter Annual Rent"
+            placeholder=" Annual Rent"
             name="rentValue"
             onChange={this.getInputs}
           />
           <input
             className="input"
             type="number"
-            placeholder="Enter Invest/Insu. max 1.5L"
+            placeholder="Invest/Insurance. max 1.5L"
             name="deduction80C"
             onChange={this.getInputs}
           />
           <input
             className="input"
             type="number"
-            placeholder="Enter 80D value"
+            placeholder="Medical Insurance max 50k"
             name="deduction80D"
             onChange={this.getInputs}
           />
           <input
             className="input"
             type="number"
-            placeholder="Enter Std.dedu. Max 50K"
+            placeholder="Standard Deduct. Max 50K"
             name="stanDard"
             onChange={this.getInputs}
           />
