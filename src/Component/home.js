@@ -48,7 +48,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <h2>Tax calculation as per New and Old budget</h2>
+        <h2>Tax calculation as per New and Old slab</h2>
         <div className="input_div">
           <InputsValue onSubmit={this.handleSubmit} />
         </div>
