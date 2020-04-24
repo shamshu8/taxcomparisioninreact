@@ -110,7 +110,7 @@ class InputsValue extends Component {
             <option value="No"></option>
           </datalist> */}
         </div>
-        <div>
+        <div className="button_container">
           <button onClick={this.taxCalculations}>Calculate Tax</button>
         </div>
       </div>

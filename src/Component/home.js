@@ -48,6 +48,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <h2>Tax calculation as per New and Old budget</h2>
         <div className="input_div">
           <InputsValue onSubmit={this.handleSubmit} />
         </div>
@@ -56,7 +57,7 @@ class Home extends React.Component {
           <div>Tax payable as per Old Tax :{this.state.oldTax}</div>
         </div>
         <div className="mainsalary_componentDiv">
-          <div>
+          <div className="table_parent">
             <NewTax
               onCalculationDone={this.showNewTaxValue}
               data={this.state}
