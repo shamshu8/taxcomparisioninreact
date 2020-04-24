@@ -70,7 +70,7 @@ class InputsValue extends Component {
           <input
             className="input"
             type="number"
-            placeholder="Standard Deduct. Max 50K"
+            placeholder="Standard Deduct. max 50K"
             name="stanDard"
             onChange={this.getInputs}
           />
