@@ -33,6 +33,7 @@ class Home extends React.Component {
   handleTax = (event) => {
     this.setState({
       showTDS: event.target.checked,
+      showTex: event.target.checked,
     });
   };
 

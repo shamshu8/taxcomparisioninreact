@@ -26,7 +26,9 @@ const SalaryComponent = (data) => {
   const showOldTDS = data.showTDS;
   const tds = showOldTDS ? data.oldTax : data.newTax;
   const totalDeductionValue = tds / 12;
-  // const monthlyTDS = tds / 12;
+
+  const showText = data.showTex;
+  const taxtext = showText ? "Old Tax (Yearly)" : "New Tax (Yearly)";
 
   let netSalaryValue;
   netSalaryValue = totalSalaryValue - totalDeductionValue;
@@ -41,6 +43,7 @@ const SalaryComponent = (data) => {
     grossSalary: Math.round(totalSalaryValue),
     netSalary: Math.round(netSalaryValue),
     tds,
+    taxtext,
   };
 };
 
@@ -89,7 +92,7 @@ const SalaryHead = ({ data, onTDSChange }) => {
             </tr>
             <tr>
               <td>
-                This year TDS
+                {salaries.taxtext}
                 <input
                   className="old_new"
                   type="checkbox"
