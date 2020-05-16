@@ -100,14 +100,11 @@ input::-webkit-inner-spin-button {
 }
 
 .monthly_salary2 {
-  /* display: flex; */
-  /* margin-top: -800px;
-  margin-left: 900px; */
-  /* width: 100%; */
   padding: 10px;
   flex-direction: column;
   padding-top: 0px;
 }
+
 .suggestion {
   font-weight: bold;
   color: green;
@@ -160,4 +157,19 @@ h3 {
 .input_div {
   display: flex;
   justify-content: center;
+}
+
+.footer {
+  margin-top: 1%;
+  background-color: lightblue;
+  min-height: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-weight: 900;
+}
+.color {
+  color: blue;
 }

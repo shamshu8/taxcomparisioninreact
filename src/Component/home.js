@@ -67,6 +67,18 @@ class Home extends React.Component {
           </div>
           <SalaryHead onTDSChange={this.handleTax} data={this.state} />
         </div>
+        <div className="footer">
+          <p>
+            Developed by{" "}
+            <a
+              className="color"
+              href="https://www.linkedin.com/in/shamshuddin-gm-36a76862/"
+              target="_blank"
+            >
+              Shamshuddin GM
+            </a>
+          </p>
+        </div>
       </div>
     );
   }
